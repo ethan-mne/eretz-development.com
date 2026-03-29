@@ -1,0 +1,16 @@
+/* PLUGIN: FANCYBOX
+-------------------------------------------- */
+
+.fancybox-bg,
+.vp-fancybox .fancybox-bg {
+	background-color: var(--vlt-color-1);
+}
+
+.fancybox-is-open .fancybox-bg {
+	opacity: .8;
+}
+
+.fancybox-loading {
+	border: 2px solid var(--vlt-color-0-0p2);
+	border-top-color: var(--vlt-color-accent);
+}

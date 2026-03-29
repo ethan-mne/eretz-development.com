@@ -1,0 +1,11 @@
+/* WIDGET: RECENT COMMENTS
+-------------------------------------------- */
+
+.vlt-widget.widget_recent_comments {
+	@extend %widget-categories;
+
+	li+li {
+		margin-top: px2rem(10px);
+	}
+
+}

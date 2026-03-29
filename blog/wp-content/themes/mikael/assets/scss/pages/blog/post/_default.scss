@@ -1,0 +1,35 @@
+/* POST: DEFAULT
+-------------------------------------------- */
+
+.vlt-post--style-default {
+
+	.vlt-post-thumbnail+.vlt-post-content {
+		padding-top: px2rem(30px);
+	}
+
+	.vlt-post-content {
+
+		.vlt-post-header {
+
+			.vlt-post-meta {
+				margin-bottom: px2rem(10px);
+			}
+
+			.vlt-post-title {
+				font-size: px2rem(32px);
+				line-height: 1.4;
+			}
+
+		}
+
+		.vlt-post-excerpt {
+			padding-top: px2rem(15px);
+		}
+
+		.vlt-post-footer {
+			padding-top: px2rem(25px);
+		}
+
+	}
+
+}

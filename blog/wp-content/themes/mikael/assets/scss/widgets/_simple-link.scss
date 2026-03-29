@@ -1,0 +1,31 @@
+/* WIDGET: SIMPLE LINK
+-------------------------------------------- */
+
+.vlt-simple-link {
+	position: relative;
+	font-size: px2rem(20px);
+	font-weight: 600;
+	color: var(--vlt-color-1);
+	letter-spacing: -0.01em;
+
+	&::before {
+		content: '';
+		display: inline-block;
+		width: px2rem(50px);
+		height: 2px;
+		margin-top: px2rem(-2px);
+		margin-right: px2rem(20px);
+		vertical-align: middle;
+		background-color: currentColor;
+		transition: width var(--vlt-transition-duration) var(--vlt-transition-easing);
+	}
+
+	&:hover {
+
+		&::before {
+			width: px2rem(40px);
+		}
+
+	}
+
+}

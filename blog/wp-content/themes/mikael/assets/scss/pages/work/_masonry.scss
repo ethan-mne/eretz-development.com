@@ -1,0 +1,43 @@
+/* WORK: MASONRY
+-------------------------------------------- */
+
+.vlt-work--style-masonry {
+
+	.vlt-work-thumbnail+.vlt-work-content,
+	.vp-portfolio__item-img-wrap+.vlt-work-content {
+		padding-top: px2rem(30px);
+	}
+
+	.vlt-work-content {
+
+		.vlt-work-header {
+
+			.vlt-work-meta {
+				margin-bottom: px2rem(10px);
+			}
+
+			.vlt-work-title {
+				font-size: px2rem(24px);
+				line-height: 1.4;
+			}
+
+		}
+
+		.vlt-work-footer {
+			padding-top: px2rem(20px);
+
+			.vlt-link-with-arrow {
+				opacity: 0;
+				transform: translate3d(0, 100%, 0);
+			}
+
+		}
+
+	}
+
+	&:hover .vlt-work-content .vlt-work-footer .vlt-link-with-arrow {
+		opacity: 1;
+		transform: translate3d(0, 0, 0);
+	}
+
+}

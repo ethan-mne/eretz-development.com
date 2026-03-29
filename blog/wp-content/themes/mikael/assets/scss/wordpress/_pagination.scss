@@ -1,0 +1,109 @@
+/* WORDPRESS: PAGINATION
+-------------------------------------------- */
+
+.vlt-pagination {
+	display: block;
+	margin-top: px2rem(100px);
+	text-align: center;
+}
+
+/* PAGED
+-------------------------------------------- */
+
+.vlt-pagination--paged {
+	display: flex;
+	justify-content: space-between;
+
+	.prev,
+	.next {
+		display: inline-flex;
+		font-weight: 500;
+		line-height: 1;
+		color: var(--vlt-color-1);
+
+		svg {
+			width: auto;
+			height: px2rem(16px);
+			transition: transform var(--vlt-transition-duration) var(--vlt-transition-easing);
+		}
+
+		&:hover {
+			color: var(--vlt-color-accent);
+		}
+
+	}
+
+	.prev span {
+		margin-left: px2rem(25px);
+	}
+
+	.next span {
+		margin-right: px2rem(25px);
+	}
+
+	.prev:hover svg {
+		transform: translate3d(6px, 0, 0);
+	}
+
+	.next:hover svg {
+		transform: translate3d(-6px, 0, 0);
+	}
+
+}
+
+/* NUMERIC
+-------------------------------------------- */
+
+.vlt-pagination--numeric {
+
+	ul {
+		display: inline-flex;
+		padding: 0;
+		margin: 0;
+		font-weight: 500;
+		line-height: 1;
+		list-style-type: none;
+	}
+
+	li>a,
+	li>span {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin: 0 px2rem(10px);
+		font-size: px2rem(18px);
+		color: var(--vlt-color-1);
+
+		svg {
+			width: auto;
+			height: px2rem(16px);
+			margin-top: 1pt;
+			transition: transform var(--vlt-transition-duration) var(--vlt-transition-easing);
+		}
+
+		&.current,
+		&:hover {
+			color: var(--vlt-color-accent);
+		}
+
+		&.prev {
+			margin-right: px2rem(25px);
+
+			&:hover svg {
+				transform: translateX(-6px);
+			}
+
+		}
+
+		&.next {
+			margin-left: px2rem(25px);
+
+			&:hover svg {
+				transform: translateX(6px);
+			}
+
+		}
+
+	}
+
+}

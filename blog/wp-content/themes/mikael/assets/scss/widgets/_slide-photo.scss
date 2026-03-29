@@ -1,0 +1,42 @@
+/* WIDGET: SLIDE PHOTO
+-------------------------------------------- */
+
+.vlt-slide-photo {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	z-index: 1;
+
+	&__inside {
+		position: relative;
+		display: inline-block;
+		overflow: hidden;
+		border-radius: px2rem(10px);
+	}
+
+	&__caption {
+		margin-top: px2rem(10px);
+		font-size: px2rem(14px);
+		font-style: italic;
+		color: var(--vlt-color-3);
+	}
+
+	&__particle {
+		position: absolute;
+		display: inline-block;
+		width: auto;
+		overflow: hidden;
+		backface-visibility: hidden;
+
+		img {
+			display: block;
+			margin: 0 auto;
+		}
+
+		&.negative-z-index {
+			z-index: -1;
+		}
+
+	}
+
+}

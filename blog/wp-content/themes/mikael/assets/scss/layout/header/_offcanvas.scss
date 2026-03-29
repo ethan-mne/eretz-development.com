@@ -1,0 +1,270 @@
+/* HEADER: OFFCANVAS
+-------------------------------------------- */
+
+.vlt-offcanvas-menu {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	display: flex;
+	width: 100%;
+	padding: px2rem(40px) px2rem(70px) px2rem(60px);
+	visibility: hidden;
+	flex-direction: column;
+	background-color: var(--vlt-color-1);
+	transform: translate3d(100%, 0, 0);
+	z-index: z('offcanvas-menu');
+
+	@include media-breakpoint-up(sm) {
+		width: px2rem(550px);
+	}
+
+	@include media-breakpoint-down(sm) {
+		padding: px2rem(40px) px2rem(40px) px2rem(60px);
+	}
+
+	// menu header
+	&__header {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		width: 100%;
+		padding-bottom: px2rem(100px);
+		color: var(--vlt-color-5);
+
+		@include media-breakpoint-down(sm) {
+			padding-bottom: px2rem(50px);
+		}
+
+		@media (max-height: 559px) {
+			padding-bottom: px2rem(50px);
+		}
+
+		.vlt-menu-burger:hover {
+			color: var(--vlt-color-0);
+		}
+
+	}
+
+	&__locales {
+
+		a {
+			display: inline-block;
+			@extend %vlt_display_1;
+
+			&+a {
+				margin-left: px2rem(20px);
+			}
+
+			&:hover,
+			&.is-active {
+				color: var(--vlt-color-accent);
+			}
+
+		}
+
+	}
+
+	// navigation
+	&__navigation {
+		height: 100%;
+		overflow-y: auto;
+
+		.vlt-no-menu-message {
+			color: var(--vlt-color-5);
+		}
+
+		.sf-menu {
+			overflow: hidden;
+
+			li {
+				display: block;
+				float: none;
+			}
+
+			a {
+				display: inline-block;
+			}
+
+			>li {
+				padding: px2rem(10px) 0;
+
+				&>a {
+					padding: px2rem(5px) 0;
+					font-size: px2rem(32px);
+					font-weight: 700;
+					line-height: 1.1;
+					color: var(--vlt-color-5);
+					letter-spacing: -.02em;
+
+					@include media-breakpoint-down(sm) {
+						font-size: px2rem(28px);
+					}
+
+					&::before {
+						content: '/';
+						position: absolute;
+						left: 0;
+						display: inline-block;
+						opacity: 0;
+						transition: transform var(--vlt-transition-duration) var(--vlt-transition-easing);
+						transform: translate(-15px, 0);
+					}
+
+				}
+
+				&:last-child {
+					padding-bottom: 0;
+				}
+
+				&:first-child {
+					padding-top: 0;
+				}
+
+			}
+
+			ul.sub-menu {
+				position: static;
+				padding-left: px2rem(10px);
+				margin-top: px2rem(10px);
+
+				ul.sub-menu {
+					margin-top: 0;
+				}
+
+				a {
+					padding: px2rem(2px) 0;
+					font-size: px2rem(18px);
+					font-weight: 400;
+					line-height: 1.7;
+					color: var(--vlt-color-5);
+				}
+
+				li.current-menu-item>a,
+				li.current_page_item>a,
+				li.current-menu-parent>a,
+				li:hover>a,
+				li.active>a,
+				li.sfHover>a {
+					color: var(--vlt-color-0);
+				}
+
+			}
+
+			>li.active>a,
+			>li.current-menu-item>a,
+			>li:hover>a {
+				color: var(--vlt-color-accent);
+			}
+
+			>li.active>a,
+			>li.current-menu-item>a {
+				padding-left: px2rem(20px);
+
+				&::before {
+					opacity: 1;
+					transition-delay: 150ms;
+					transform: translate(0, 0);
+				}
+
+			}
+
+		}
+
+	}
+
+	// menu footer
+	&__footer {
+		padding-top: px2rem(100px);
+
+		@include media-breakpoint-down(sm) {
+			padding-top: px2rem(50px);
+		}
+
+		>div {
+			opacity: 0;
+		}
+
+	}
+
+	// contacts
+	&__socials {
+		margin-bottom: px2rem(50px);
+		color: var(--vlt-color-5);
+
+		@media (max-height: 559px) {
+			margin-bottom: 0;
+		}
+
+		@include media-breakpoint-down(sm) {
+			display: none;
+		}
+
+		a {
+			@extend %vlt_display_2;
+
+			&:hover {
+				color: var(--vlt-color-0);
+			}
+		}
+
+		a+a {
+			margin-left: px2rem(20px);
+		}
+
+	}
+
+	// copyright
+	&__copyright {
+		color: var(--vlt-color-5);
+		@extend %vlt_display_1;
+
+		@media (max-height: 559px) {
+			display: none;
+		}
+
+		p {
+			margin-bottom: 0;
+		}
+
+	}
+
+}
+
+// fix for admin bar
+@media (min-width: 783px) {
+
+	.admin-bar .vlt-offcanvas-menu {
+		top: 32px !important;
+	}
+
+}
+
+@media (max-width: 782px) {
+
+	.admin-bar .vlt-offcanvas-menu {
+		top: 46px !important;
+	}
+
+}
+
+@media (max-width: 600px) {
+
+	.admin-bar .vlt-offcanvas-menu {
+		top: 0 !important;
+	}
+
+}
+
+// overlay
+.vlt-site-overlay {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	visibility: hidden;
+	background-color: var(--vlt-color-1-0p15);
+	opacity: 0;
+	z-index: z('site-overlay');
+}

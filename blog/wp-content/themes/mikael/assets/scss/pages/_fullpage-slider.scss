@@ -1,0 +1,169 @@
+/* PAGE: FULLPAGE SLIDER
+-------------------------------------------- */
+
+.vlt-fullpage-slider {
+	height: 100vh;
+
+	// section
+	.vlt-section {
+		display: flex;
+		flex-direction: column;
+		background-color: var(--vlt-color-0);
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+		flex: 1 1 auto;
+		flex-wrap: wrap;
+
+		&__vertical-align {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: 100%;
+			min-height: 100%;
+			overflow: hidden;
+			flex-direction: column;
+			flex: 0 0 auto;
+		}
+
+		&__content {
+			position: relative;
+			display: flex;
+			align-items: center;
+			width: 100%;
+			min-height: 100%;
+			padding-top: px2rem(120px);
+			padding-bottom: px2rem(120px);
+			z-index: 2;
+			flex: 1 1 auto;
+		}
+
+		// video background
+		.vlt-section__video {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			overflow: hidden;
+			pointer-events: none;
+			z-index: -1;
+
+			&::before {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				background-color: var(--vlt-color-1);
+				opacity: 0.8;
+			}
+
+		}
+
+		// ken burn effect
+		.vlt-section__ken-burn-background {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			overflow: hidden;
+			pointer-events: none;
+			z-index: -1;
+
+			img {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				transition: transform 2.5s var(--vlt-transition-easing);
+				transform: scale(1.5);
+				will-change: transform;
+				object-fit: cover;
+			}
+
+		}
+
+		&.active .vlt-section__ken-burn-background img {
+			transition: transform 5s var(--vlt-transition-easing);
+			transform: scale(1);
+			backface-visibility: hidden;
+		}
+
+		&__particles {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			overflow: hidden;
+			pointer-events: auto;
+			z-index: -1;
+
+			.vlt-particle {
+				position: absolute;
+				background-repeat: no-repeat;
+			}
+
+		}
+
+		&__elementor {
+			width: 100%;
+			padding: 0;
+			margin-right: auto;
+			margin-left: auto;
+
+			@include media-breakpoint-up(md) {
+				padding: 0 calc(px2rem(30px) - 15px);
+			}
+
+			@include media-breakpoint-up(xl) {
+				padding: 0 calc(px2rem(60px) - 15px);
+			}
+
+		}
+
+	}
+
+	&-progress-bar {
+		position: fixed;
+		top: 50%;
+		left: 60px;
+		width: 2px;
+		height: 30vh;
+		background-color: var(--vlt-color-1-0p1);
+		transition: color var(--vlt-transition-duration) var(--vlt-transition-easing);
+		transform: translate(0, -50%);
+		z-index: z('slider-progress-bar');
+
+		@include media-breakpoint-down(lg) {
+			display: none;
+		}
+
+		.is-light & {
+			background-color: var(--vlt-color-0-0p1);
+		}
+
+		span {
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			background-color: var(--vlt-color-1);
+			transition: color var(--vlt-transition-duration) var(--vlt-transition-easing), transform calc(var(--vlt-transition-duration) * 2) var(--vlt-transition-duration) var(--vlt-transition-easing);
+			transform-origin: top;
+			will-change: transform;
+
+			.is-light & {
+				background-color: var(--vlt-color-0);
+			}
+
+		}
+
+	}
+
+}

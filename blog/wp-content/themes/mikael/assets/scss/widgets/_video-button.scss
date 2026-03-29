@@ -1,0 +1,62 @@
+/* WIDGET: VIDEO BUTTON
+-------------------------------------------- */
+
+.vlt-video-button {
+	display: inline-flex;
+	align-items: center;
+	flex-direction: column;
+
+	h6 {
+		margin-top: px2rem(15px);
+		font-size: px2rem(18px);
+		white-space: nowrap;
+	}
+
+	a {
+		position: relative;
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		width: px2rem(60px);
+		height: px2rem(60px);
+		font-size: 10px;
+		line-height: 1;
+		color: var(--vlt-color-0);
+		background-color: var(--vlt-color-1);
+		border-radius: 50%;
+		outline: none;
+		z-index: 1;
+
+		svg {
+			position: relative;
+			width: 1em;
+			height: 1em;
+			margin-left: 0.15em;
+			font-size: 2.5em;
+		}
+
+		&::after {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background-color: var(--vlt-color-1);
+			border-radius: 50%;
+			opacity: 0.1;
+			transition: transform var(--vlt-transition-duration) var(--vlt-transition-easing);
+		}
+
+		&:hover {
+			color: var(--vlt-color-0);
+
+			&::after {
+				transform: scale(1.2);
+			}
+
+		}
+
+	}
+
+}

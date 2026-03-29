@@ -1,0 +1,58 @@
+/* WORDPRESS: SIDEBAR
+-------------------------------------------- */
+
+.vlt-sidebar--right {
+	padding-left: px2rem(25px);
+
+	@include media-breakpoint-down(md) {
+		padding-left: 0;
+		margin-top: px2rem(100px);
+	}
+
+}
+
+/* WIDGET
+-------------------------------------------- */
+
+.vlt-widget {
+	display: block;
+
+	&~& {
+		margin-top: px2rem(50px);
+	}
+
+	ul {
+		list-style-type: none;
+
+		li {
+			clear: both;
+		}
+
+		.children,
+		.sub-menu {
+			margin-left: px2rem(10px);
+		}
+
+	}
+
+	&__title {
+		padding: 0;
+		margin: 0 0 px2rem(20px) 0;
+		color: var(--vlt-color-1);
+	}
+
+}
+
+// import
+@import "widgets/categories";
+@import "widgets/search-form";
+@import "widgets/archive";
+@import "widgets/pages";
+@import "widgets/meta";
+@import "widgets/recent-comments";
+@import "widgets/recent-entries";
+@import "widgets/nav-menu";
+@import "widgets/tag-cloud";
+@import "widgets/text";
+@import "widgets/rss";
+@import "widgets/calendar";

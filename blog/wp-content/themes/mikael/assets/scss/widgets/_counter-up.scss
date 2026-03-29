@@ -1,0 +1,50 @@
+/* WIDGET: COUNTER UP
+-------------------------------------------- */
+
+.vlt-counter-up {
+	display: inline-flex;
+	align-items: flex-start;
+
+	.counter {
+		font-size: px2rem(120px);
+		font-weight: 700;
+		line-height: 1;
+		color: var(--vlt-color-accent);
+		letter-spacing: -.02em;
+	}
+
+	.sup {
+		font-size: px2rem(40px);
+		font-weight: 700;
+		line-height: 1;
+		color: var(--vlt-color-accent);
+		letter-spacing: -.02em;
+	}
+
+}
+
+.vlt-counter-up-small {
+	display: inline-flex;
+	align-items: center;
+	padding: px2rem(15px) px2rem(30px) px2rem(15px) px2rem(20px);
+	background-color: var(--vlt-color-1-0p1);
+	border-radius: px2rem(8px);
+	box-shadow: inset 0px -2px 0px 0px var(--vlt-color-1-0p1);
+
+	.counter {
+		min-width: px2rem(50px);
+		font-size: px2rem(40px);
+		font-weight: 700;
+		line-height: 1;
+		color: var(--vlt-color-1);
+		letter-spacing: -.02em;
+	}
+
+	h6 {
+		margin-left: px2rem(15px);
+		color: var(--vlt-color-1);
+		flex-basis: 100%;
+		@extend %vlt_display_1;
+	}
+
+}

@@ -1,0 +1,41 @@
+/* PARTIAL: FIXED ACTION BLOCK
+-------------------------------------------- */
+
+.vlt-fixed-action-block {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	width: px2rem(100px);
+	height: px2rem(100px);
+	font-size: px2rem(20px);
+	font-weight: 700;
+	letter-spacing: -.01em;
+	color: var(--vlt-color-0);
+	border-top-left-radius: 8px;
+	background-color: var(--vlt-color-1);
+	z-index: z('slider-numbers');
+
+	a {
+		color: inherit;
+		font-size: px2rem(24px);
+
+		svg {
+			height: 1em;
+			width: 1em;
+		}
+
+	}
+
+	&--slider-numbers {
+
+		a:hover svg {
+			animation: vlt_animate_icon_bottom var(--vlt-transition-duration) var(--vlt-transition-easing);
+		}
+
+	}
+
+}

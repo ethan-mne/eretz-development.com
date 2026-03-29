@@ -1,0 +1,375 @@
+/* HTML
+-------------------------------------------- */
+
+html {
+	position: relative;
+	min-height: 100%;
+	overflow: auto;
+	font-size: $base_font_size - 2px;
+
+	@include media-breakpoint-up(md) {
+		font-size: $base_font_size - 1px;
+	}
+
+	@include media-breakpoint-up(lg) {
+		font-size: $base_font_size;
+	}
+
+}
+
+/* BODY
+-------------------------------------------- */
+
+body {
+	min-width: px2rem(320px);
+	min-height: 100%;
+	padding: 0;
+	margin: 0;
+	overflow: auto;
+
+	@if $smooth_font {
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+	}
+
+}
+
+/* IMAGE
+-------------------------------------------- */
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+/* PARAGRAPH
+-------------------------------------------- */
+
+p {
+	margin: 0 0 px2rem(30px);
+
+	&:empty {
+		display: none;
+	}
+
+}
+
+/* STRONG
+-------------------------------------------- */
+
+strong {
+	font-weight: 600;
+}
+
+/* MARK
+-------------------------------------------- */
+
+mark {
+	background-color: var(--vlt-color-accent);
+}
+
+/* LINK
+-------------------------------------------- */
+
+a {
+	color: inherit;
+	text-decoration: none;
+	transition: all var(--vlt-transition-duration) var(--vlt-transition-easing);
+
+	&:hover,
+	&:focus,
+	&:active {
+		text-decoration: none;
+		outline: none;
+	}
+
+	&:hover {
+		color: var(--vlt-color-accent);
+	}
+
+}
+
+/* HEADINGS
+-------------------------------------------- */
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+	padding: 0;
+	margin: 0;
+}
+
+/* LIST
+-------------------------------------------- */
+
+ul,
+ol {
+	padding: 0;
+	margin: 0;
+	list-style-position: inside;
+}
+
+/* DIVIDER
+-------------------------------------------- */
+
+hr {
+	margin: px2rem(30px) 0;
+	border: none;
+	border-bottom: 1px solid var(--vlt-color-4);
+}
+
+/* ADDRESS
+-------------------------------------------- */
+
+address {
+	margin: 0 0 px2rem(30px);
+	font-size: px2rem(24px);
+	font-weight: 700;
+	font-style: normal;
+	line-height: 1.4;
+	color: var(--vlt-color-accent);
+	letter-spacing: -.02em;
+}
+
+/* BLOCKQUOTE
+-------------------------------------------- */
+
+blockquote {
+	margin: 0 0 px2rem(30px);
+	color: var(--vlt-color-1);
+
+	p {
+		margin-bottom: 0;
+	}
+
+}
+
+cite {
+	display: block;
+	margin: px2rem(16px) 0 0;
+	font-weight: 600;
+	font-style: normal;
+	color: var(--vlt-color-1);
+	@extend %vlt_display_1;
+}
+
+/* PREFORMATTED
+-------------------------------------------- */
+
+code,
+kbd {
+	padding: px2rem(5px) px2rem(8px);
+	font-family: Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+	font-size: 87.5%;
+	color: var(--vlt-color-1);
+	background-color: var(--vlt-color-4);
+	border-radius: 0;
+}
+
+a>code {
+	color: var(--vlt-color-1);
+}
+
+pre {
+	max-width: 100%;
+	padding: px2rem(35px);
+	margin: 0 0 px2rem(30px);
+	overflow: auto;
+	clear: both;
+	font-family: Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+	color: var(--vlt-color-1);
+	tab-size: 4;
+	white-space: pre-wrap;
+	background-color: var(--vlt-color-4);
+}
+
+/* FORM / INPUT / TEXTAREA / SELECT
+-------------------------------------------- */
+
+form {
+	max-width: 100%;
+}
+
+label {
+	display: block;
+	margin-bottom: px2rem(5px);
+	color: var(--vlt-color-1);
+}
+
+input[type='text'],
+input[type='date'],
+input[type='email'],
+input[type='password'],
+input[type='tel'],
+input[type='url'],
+input[type='search'],
+input[type='number'],
+textarea,
+select {
+	display: block;
+	width: 100%;
+	appearance: none;
+	padding: px2rem(12px) px2rem(16px);
+	margin: 0;
+	color: var(--vlt-color-2);
+	background-color: var(--vlt-color-4);
+	border: none;
+	border-radius: px2rem(4px);
+	outline: none;
+	box-shadow: 0px 5px 15px 5px var(--vlt-color-1-0p05), inset 0px -2px 0px 0px var(--vlt-color-1-0p1);
+	transition: all var(--vlt-transition-duration) var(--vlt-transition-easing);
+
+	&.is-dark {
+		color: var(--vlt-color-0);
+		background-color: var(--vlt-color-6);
+		box-shadow: 0px 5px 15px 5px var(--vlt-color-1-0p05), inset 0px -2px 0px 0px var(--vlt-color-1-0p2);
+	}
+
+}
+
+select {
+	color: var(--vlt-color-2);
+	background-image: url("data:image/svg+xml;utf8,<svg fill='%23999999' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
+	background-repeat: no-repeat;
+	background-position: right 16px bottom 50%;
+	background-size: 18px 18px;
+
+	&.is-dark {
+		color: var(--vlt-color-3);
+	}
+
+}
+
+textarea {
+	width: 100%;
+	max-width: 100%;
+	transition: height 0s;
+}
+
+button,
+input[type='submit'] {
+
+	&:focus {
+		outline: none;
+	}
+
+}
+
+input[type='text'],
+input[type='date'],
+input[type='email'],
+input[type='password'],
+input[type='tel'],
+input[type='url'],
+input[type='search'],
+input[type='number'],
+textarea,
+select {
+
+	@include input-placeholder {
+		color: var(--vlt-color-2);
+		opacity: 1;
+
+		&.is-dark {
+			color: var(--vlt-color-3);
+		}
+
+	}
+
+	&:focus {
+
+		@include input-placeholder {
+			opacity: 0;
+		}
+
+	}
+
+}
+
+.vlt-form-group {
+	position: relative;
+	display: block;
+	margin-bottom: px2rem(30px);
+}
+
+.vlt-form-row {
+	display: grid;
+	grid-gap: 30px;
+	grid-template-columns: repeat(1, 1fr);
+
+	&.two-col {
+		grid-template-columns: repeat(2, 1fr);
+
+		@include media-breakpoint-down(md) {
+			grid-gap: 0;
+			grid-template-columns: repeat(1, 1fr);
+		}
+
+	}
+
+	&.three-col {
+		grid-template-columns: repeat(3, 1fr);
+
+		@include media-breakpoint-down(md) {
+			grid-gap: 0;
+			grid-template-columns: repeat(1, 1fr);
+		}
+
+	}
+
+}
+
+/* DEFINITION LIST
+-------------------------------------------- */
+
+dl {
+	margin: 0;
+}
+
+dt {
+	font-size: px2rem(20px);
+	font-weight: 700;
+	color: var(--vlt-color-1);
+	letter-spacing: -.02em;
+}
+
+dd {
+	padding: 0;
+	margin: px2rem(5px) 0 0 0;
+}
+
+dd+dt {
+	margin-top: px2rem(30px);
+}
+
+/* TABLE
+-------------------------------------------- */
+
+table {
+	width: 100%;
+	max-width: 100%;
+	margin: 0;
+	border-collapse: collapse;
+
+	td,
+	th {
+		padding: px2rem(8px) px2rem(15px);
+		border: 1px solid var(--vlt-color-4);
+	}
+
+	tr th,
+	thead th {
+		font-weight: 600;
+		color: var(--vlt-color-1);
+	}
+
+}

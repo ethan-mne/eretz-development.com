@@ -1,0 +1,43 @@
+// VARIABLES
+$smooth_font: false;
+$base_font_size: 16px;
+
+:root {
+	--vlt-transition-duration: 300ms;
+	--vlt-transition-easing: cubic-bezier(0.46, 0.03, 0.52, 0.96);
+
+	@include defineColorHSL(--vlt-color-accent, var(--vlt-color-accent-h), var(--vlt-color-accent-s), var(--vlt-color-accent-l)); // #c3323a
+	@include defineColorHSL(--vlt-color-0, 0, 0%, 100%); // #fff
+	@include defineColorHSL(--vlt-color-1, 0, 0%, 6%); // #101010
+	@include defineColorHSL(--vlt-color-2, 0, 0%, 36%); // #5c5c5c
+	@include defineColorHSL(--vlt-color-3, 0, 0%, 60%); // #999
+	@include defineColorHSL(--vlt-color-4, 0, 0%, 93%); // #eee
+	@include defineColorHSL(--vlt-color-5, 0, 0%, 80%); // #ccc
+	@include defineColorHSL(--vlt-color-6, 0, 0%, 13%); // #222
+
+	@include defineColorHSLA(--vlt-color-0-0p1, 0, 0%, 100%, .1); // #fff with opacity .1
+	@include defineColorHSLA(--vlt-color-0-0p2, 0, 0%, 100%, .2); // #fff with opacity .2
+	@include defineColorHSLA(--vlt-color-0-0p8, 0, 0%, 100%, .8); // #fff with opacity .8
+
+	@include defineColorHSLA(--vlt-color-1-0p05, 0, 0%, 6%, .05); // #101010 with opacity .05
+	@include defineColorHSLA(--vlt-color-1-0p1, 0, 0%, 6%, .1); // #101010 with opacity .1
+	@include defineColorHSLA(--vlt-color-1-0p15, 0, 0%, 6%, .15); // #101010 with opacity .15
+	@include defineColorHSLA(--vlt-color-1-0p8, 0, 0%, 6%, .8); // #101010 with opacity .8
+	@include defineColorHSLA(--vlt-color-1-0p2, 0, 0%, 6%, .2); // #101010 with opacity .2
+
+}
+
+// Z-INDEXES
+$z-indexes: (
+	'default': 1,
+	'fixed-footer': 20,
+	'fixed-socials': 20,
+	'slider-progress-bar': 25,
+	'slider-numbers': 25,
+	'header': 30,
+	'site-overlay': 35,
+	'offcanvas-menu': 40,
+	'navbar': 50,
+	'custom-cursor': 100,
+	'preloader-spinner': 120
+);

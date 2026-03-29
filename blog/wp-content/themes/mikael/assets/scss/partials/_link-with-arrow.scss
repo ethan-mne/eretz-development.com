@@ -1,0 +1,30 @@
+/* PARTIAL: LINK WITH ARROW
+-------------------------------------------- */
+
+.vlt-link-with-arrow {
+	@extend %vlt_display_1;
+	display: inline-flex;
+	align-items: center;
+	color: var(--vlt-color-accent);
+
+	&__icon {
+		margin-left: px2rem(20px);
+		transition: margin var(--vlt-transition-duration) var(--vlt-transition-easing);
+
+		svg {
+			display: block;
+			height: 1em;
+			width: auto;
+		}
+
+	}
+
+	&:hover {
+
+		.vlt-link-with-arrow__icon {
+			margin-left: px2rem(10px);
+		}
+
+	}
+
+}

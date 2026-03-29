@@ -1,0 +1,10 @@
+/* PARTIAL: WORK THUMBNAIL
+-------------------------------------------- */
+
+.vlt-work-thumbnail {
+	@extend .vlt-post-thumbnail;
+}
+
+.vlt-work:hover .vlt-work-thumbnail img {
+	transform: scale(1.05) translateZ(0);
+}

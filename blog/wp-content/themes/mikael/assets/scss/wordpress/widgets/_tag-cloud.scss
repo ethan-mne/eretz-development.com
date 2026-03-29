@@ -1,0 +1,33 @@
+/* WIDGET: TAG CLOUD
+-------------------------------------------- */
+
+%widget-tag-cloud,
+.vlt-widget.widget_tag_cloud {
+
+	.tagcloud {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+	}
+
+	a {
+		display: inline-flex;
+		padding: px2rem(2px) px2rem(8px);
+		margin: 0 px2rem(6px) px2rem(6px) 0;
+		font-size: px2rem(12px);
+		font-weight: 600;
+		line-height: 1.8;
+		color: var(--vlt-color-3);
+		text-transform: uppercase;
+		background-color: var(--vlt-color-4);
+		border-radius: px2rem(4px);
+		box-shadow: inset 0px -2px 0px 0px var(--vlt-color-1-0p1);
+
+		&:hover {
+			color: var(--vlt-color-0);
+			background-color: var(--vlt-color-accent);
+		}
+
+	}
+
+}

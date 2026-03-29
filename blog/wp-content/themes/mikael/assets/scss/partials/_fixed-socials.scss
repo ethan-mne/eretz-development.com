@@ -1,0 +1,32 @@
+/* PARTIAL: FIXED SOCIALS
+-------------------------------------------- */
+
+.vlt-fixed-socials {
+	@extend %vlt_display_2;
+	display: flex;
+	position: fixed;
+	bottom: 50%;
+	right: 60px;
+	color: var(--vlt-color-1);
+	transform: rotate(-90deg) translate3d(50%, 0, 0); // 100% for fix bottom
+	transform-origin: 100% 100%;
+	z-index: z('fixed-socials');
+
+	@include media-breakpoint-down(lg) {
+		display: none;
+	}
+
+	.is-light & {
+		color: var(--vlt-color-0);
+	}
+
+	a+a {
+		margin-left: px2rem(20px);
+	}
+
+	a:hover {
+		color: inherit;
+		opacity: 0.8;
+	}
+
+}

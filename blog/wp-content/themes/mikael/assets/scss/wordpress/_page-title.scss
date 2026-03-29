@@ -1,0 +1,18 @@
+/* WORDPRESS: PAGE TITLE
+-------------------------------------------- */
+
+.vlt-page-title {
+	display: flex;
+	align-items: center;
+	padding-top: px2rem(240px);
+
+	.vlt-breadcrumbs {
+		margin-top: px2rem(15px);
+
+		.sep {
+			margin: 0 4px;
+		}
+
+	}
+
+}

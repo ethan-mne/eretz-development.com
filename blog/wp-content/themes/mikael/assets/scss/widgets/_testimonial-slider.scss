@@ -1,0 +1,78 @@
+/* WIDGET: TESTIMONIAL SLIDER
+-------------------------------------------- */
+
+.vlt-testimonial-slider {
+
+	.swiper-slide:not(.swiper-slide-active) {
+		opacity: 0;
+		transition: opacity 500ms var(--vlt-transition-easing), transform 500ms var(--vlt-transition-easing);
+		transform: scale(.8);
+	}
+
+}
+
+.vlt-testimonial-item {
+	position: relative;
+	display: flex;
+	padding: px2rem(35px) px2rem(80px) px2rem(35px) px2rem(40px);
+	background: hsl(var(--vlt-color-accent-h), 100%, var(--vlt-color-accent-l)) url(../img/cartographer.png) repeat;
+	border-radius: px2rem(10px);
+	box-shadow: 0px 5px 15px 5px var(--vlt-color-1-0p1);
+
+	@include media-breakpoint-down(md) {
+		padding-right: px2rem(40px);
+	}
+
+	&::after {
+		content: '';
+		position: absolute;
+		right: px2rem(40px);
+		bottom: px2rem(40px);
+		width: px2rem(50px);
+		height: px2rem(50px);
+		background-image: url('../img/quote.svg');
+		background-position: center;
+		background-size: cover;
+		opacity: 0.2;
+	}
+
+	.vlt-testimonial-item__avatar {
+		max-width: px2rem(120px);
+		margin-right: px2rem(40px);
+		flex-shrink: 0;
+
+		@include media-breakpoint-down(md) {
+			display: none;
+		}
+
+		img {
+			border-radius: 50%;
+		}
+
+	}
+
+	.vlt-testimonial-item__content {
+		flex-basis: 100%;
+	}
+
+	.vlt-testimonial-item__text {
+		margin-bottom: px2rem(30px);
+		font-size: px2rem(20px);
+		font-weight: 500;
+		line-height: 1.5;
+		color: var(--vlt-color-0);
+		letter-spacing: -.01em;
+	}
+
+	.vlt-testimonial-item__name {
+		font-size: px2rem(20px);
+		line-height: 1.5;
+		color: var(--vlt-color-0);
+	}
+
+	.vlt-testimonial-item__function {
+		color: var(--vlt-color-0-0p8);
+		@extend %vlt_display_1;
+	}
+
+}

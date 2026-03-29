@@ -1,0 +1,28 @@
+
+---Downloaded files---
+The import files for: Demo Import were successfully downloaded!
+Initial max execution time = 120
+Files info:
+Site URL = https://blog.eretz-development.com
+Data file = /home/u662656180/domains/eretz-development.com/public_html/blog/wp-content/themes/mikael/inc/demo/demo-content.xml
+Widget file = /home/u662656180/domains/eretz-development.com/public_html/blog/wp-content/themes/mikael/inc/demo/widgets.wie
+Customizer file = /home/u662656180/domains/eretz-development.com/public_html/blog/wp-content/themes/mikael/inc/demo/customizer.dat
+Redux files:
+not defined!
+
+---Importing widgets---
+Blog Sidebar : 
+
+Search - No Title - Imported
+Text - About Me - Imported
+Recent Posts - No Title - Imported
+Tag Cloud - Tags - Imported
+Meta - Meta - Imported
+
+
+
+---Importing customizer settings---
+Customizer settings import finished!
+
+---ocdi/after_import---
+

@@ -1,0 +1,55 @@
+/* WIDGET: CONTACT FORM 7
+-------------------------------------------- */
+
+.wpcf7 {
+
+	p {
+		margin-bottom: 0;
+	}
+
+	br {
+		display: none;
+	}
+
+	.wpcf7-form-control-wrap {
+		display: block;
+	}
+
+	.wpcf7-list-item {
+		margin: 0;
+	}
+
+	.wpcf7-not-valid-tip {
+		padding: 0;
+		margin: 0;
+	}
+
+	.wpcf7-not-valid-tip {
+		margin: px2rem(5px) 0 0;
+		font-size: px2rem(13px);
+		color: var(--danger);
+	}
+
+	.wpcf7-response-output {
+		position: relative;
+		padding: 0 !important;
+		margin: px2rem(30px) 0 0;
+		font-size: px2rem(14px);
+		background-color: transparent;
+		border: none;
+
+		&.wpcf7-validation-errors {
+			color: var(--danger);
+		}
+
+		&.wpcf7-mail-sent-ok {
+			color: var(--success);
+		}
+
+	}
+
+	span.ajax-loader {
+		display: none !important;
+	}
+
+}

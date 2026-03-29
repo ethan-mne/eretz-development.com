@@ -1,0 +1,152 @@
+/* WORDPRESS: COMMENTS
+-------------------------------------------- */
+
+.vlt-comments-wrap {
+	margin-top: px2rem(80px);
+}
+
+.vlt-comments__title,
+.vlt-comment-form__title {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin: 0 0 px2rem(30px);
+}
+
+#cancel-comment-reply-link {
+	margin-left: px2rem(30px);
+	font-size: 75%;
+
+	svg {
+		width: 1em;
+		height: 1em;
+	}
+
+}
+
+.vlt-comments+.vlt-comment-form {
+	margin-top: px2rem(80px);
+}
+
+p.form-submit {
+	margin-bottom: 0;
+}
+
+// comments list
+.vlt-comments__list,
+.vlt-comments__list ul.children {
+	padding: 0;
+	margin: 0;
+	list-style-type: none;
+
+	li.vlt-comment-item {
+		padding: px2rem(20px) 0;
+
+		&:first-child {
+			padding-top: 0;
+		}
+
+		&:last-child {
+			padding-bottom: 0;
+		}
+
+	}
+
+}
+
+.vlt-comments__list ul.children {
+	padding-left: px2rem(20px);
+	margin-top: px2rem(40px);
+
+	@include media-breakpoint-down(md) {
+		padding-left: 0;
+	}
+
+	li.vlt-comment-item:last-child {
+		padding-bottom: 0;
+	}
+
+}
+
+.vlt-comments__list .comment-respond {
+	margin: px2rem(40px) 0 0;
+}
+
+// comment item
+.vlt-comment-item__inner {
+	display: flex;
+
+	.vlt-comment-avatar {
+		display: block;
+		margin-right: px2rem(30px);
+		flex-shrink: 0;
+
+		@include media-breakpoint-down(md) {
+			display: none;
+		}
+
+		img {
+			display: block;
+			border-radius: px2rem(4px);
+		}
+
+	}
+
+	.vlt-comment-content {
+		width: 100%;
+
+		@include media-breakpoint-down(md) {
+			padding-left: 0 !important;
+		}
+
+		.vlt-comment-header {
+			display: block;
+			margin-bottom: px2rem(15px);
+
+			h5 {
+				font-size: px2rem(18px);
+			}
+
+			>span {
+				display: block;
+				margin-top: px2rem(10px);
+				color: var(--vlt-color-3);
+				@extend %vlt_display_1;
+			}
+
+		}
+
+		.comment-reply-link {
+			display: inline-flex;
+			padding: px2rem(2px) px2rem(8px);
+			margin-top: px2rem(20px);
+			font-size: px2rem(12px);
+			font-weight: 600;
+			line-height: 1.8;
+			color: var(--vlt-color-4);
+			text-transform: uppercase;
+			background-color: var(--vlt-color-6);
+			border-radius: px2rem(4px);
+			box-shadow: inset 0px -2px 0px 0px var(--vlt-color-1-0p1);
+
+			&:hover {
+				color: var(--vlt-color-0);
+				background-color: var(--vlt-color-accent);
+			}
+
+		}
+
+	}
+
+}
+
+// comment navigation
+.vlt-comments-navigation {
+	margin-top: px2rem(40px);
+	font-weight: 500;
+
+	a+a {
+		margin-left: px2rem(30px);
+	}
+
+}

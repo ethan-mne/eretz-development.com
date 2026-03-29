@@ -1,0 +1,89 @@
+@keyframes vlt_animate_icon_bottom {
+	49% {
+		transform: translateY(100%);
+	}
+
+	50% {
+		opacity: 0;
+		transform: translateY(-100%);
+	}
+
+	51% {
+		opacity: 1;
+	}
+}
+
+@keyframes vlt_animation_block {
+	0% {
+		opacity: 0;
+		transform: translateY(30px) translateZ(0) scaleY(1.1) skewY(2deg);
+		transform-origin: 0 0;
+		transform-style: preserve-3d;
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateY(0) translateZ(0) scaleY(1) skewY(0);
+		transform-style: preserve-3d;
+	}
+}
+
+@keyframes vlt_bounce {
+
+	0%,
+	100% {
+		transform: scale(0);
+	}
+
+	50% {
+		transform: scale(1);
+	}
+}
+
+@keyframes vlt_fade_in_up_sm {
+	from {
+		opacity: 0;
+		transform: translate3d(0, 100px, 0);
+	}
+
+	to {
+		opacity: 1;
+		transform: translate3d(0, 0, 0);
+	}
+}
+
+@keyframes vlt_fade_in_down_sm {
+	from {
+		opacity: 0;
+		transform: translate3d(0, -100px, 0);
+	}
+
+	to {
+		opacity: 1;
+		transform: translate3d(0, 0, 0);
+	}
+}
+
+@keyframes vlt_fade_in_left_sm {
+	from {
+		opacity: 0;
+		transform: translate3d(-100px, 0, 0);
+	}
+
+	to {
+		opacity: 1;
+		transform: translate3d(0, 0, 0);
+	}
+}
+
+@keyframes vlt_fade_in_right_sm {
+	from {
+		opacity: 0;
+		transform: translate3d(100px, 0, 0);
+	}
+
+	to {
+		opacity: 1;
+		transform: translate3d(0, 0, 0);
+	}
+}

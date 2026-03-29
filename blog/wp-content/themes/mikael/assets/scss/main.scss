@@ -1,0 +1,82 @@
+/* Master Stylesheet
+ * Version: 1.0
+ *
+ * Powered by VLThemes
+ *
+ * 00. Framework
+ * 01. Helpers
+ * 02. Base
+ * 03. Layout
+ * 04. Pages
+ * 05. Partials
+ * 06. Widgets
+ * 07. WordPress
+ * 08. Plugins
+ */
+
+/* 00. Framework */
+@import "plugins/bootstrap";
+
+/* 01. Helpers */
+@import "abstracts/functions";
+@import "abstracts/mixins";
+@import "abstracts/variables";
+@import "abstracts/keyframes";
+@import "abstracts/snippets";
+
+/* 02. Base */
+@import "base/helper-classes";
+@import "base/gutenberg";
+@import "base/custom-css";
+@import "base/typography";
+
+/* 03. Layout */
+@import "layout/grid";
+@import "layout/header";
+@import "layout/footer";
+
+/* 04. Pages */
+@import "pages/404";
+@import "pages/blog";
+@import "pages/empty";
+@import "pages/portfolio";
+@import "pages/fullpage-slider";
+
+/* 05. Partials */
+@import "partials/fixed-action-block";
+@import "partials/link-with-arrow";
+@import "partials/fixed-socials";
+@import "partials/custom-cursor";
+@import "partials/site-preloader";
+
+/* 06. Widgets */
+@import "widgets/award-item";
+@import "widgets/button";
+@import "widgets/contact-form-7";
+@import "widgets/counter-up";
+@import "widgets/partners";
+@import "widgets/progress-bar";
+@import "widgets/projects-showcase";
+@import "widgets/service-box";
+@import "widgets/simple-link";
+@import "widgets/slide-photo";
+@import "widgets/slider-controls";
+@import "widgets/testimonial-slider";
+@import "widgets/text-editor";
+@import "widgets/timeline-slider";
+@import "widgets/video-button";
+
+/* 07. WordPress */
+@import "wordpress/sidebar";
+@import "wordpress/password-form";
+@import "wordpress/link-pages";
+@import "wordpress/comments";
+@import "wordpress/pagination";
+@import "wordpress/page-title";
+
+/* 08. Plugins */
+@import "plugins/bootstrap-modal";
+@import "plugins/fancybox";
+@import "plugins/isotope";
+@import "plugins/jarallax";
+@import "plugins/piling";

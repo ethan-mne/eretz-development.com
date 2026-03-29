@@ -1,0 +1,31 @@
+/* WIDGET: SERVICE BOX
+-------------------------------------------- */
+
+.vlt-service-box {
+	overflow: hidden;
+
+	&__title {
+		margin-bottom: px2rem(15px);
+	}
+
+	&__content {
+		margin-bottom: 0;
+	}
+
+	.vlt-link-with-arrow {
+		position: relative;
+		margin-top: px2rem(20px);
+		opacity: 0;
+		transform: translate3d(0, 100%, 0);
+	}
+
+	&:hover {
+
+		.vlt-link-with-arrow {
+			opacity: 1;
+			transform: translate3d(0, 0, 0);
+		}
+
+	}
+
+}

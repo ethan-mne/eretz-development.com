@@ -1,0 +1,54 @@
+/* WIDGET: PARTNERS
+-------------------------------------------- */
+
+.vlt-partners {
+	display: flex;
+	align-items: center;
+	margin: 0 -15px;
+	flex-direction: row;
+	flex-wrap: wrap;
+
+	@include media-breakpoint-up(md) {
+		justify-content: space-between;
+	}
+
+}
+
+.vlt-partner-logo {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	max-width: 33.333333%;
+	padding: 0 15px;
+	flex: 0 0 33.333333%;
+
+	@include media-breakpoint-up(md) {
+		width: auto;
+		max-width: 100%;
+		flex: 0 0 auto;
+	}
+
+	&:nth-child(-n + 3) {
+
+		@include media-breakpoint-down(md) {
+			margin-bottom: 40px;
+		}
+
+	}
+
+	img {
+		display: block;
+		width: auto;
+		flex-shrink: 0;
+	}
+
+	img {
+		opacity: 0.5;
+		transition: opacity var(--vlt-transition-duration) var(--vlt-transition-easing);
+	}
+
+	&:hover img {
+		opacity: 1;
+	}
+
+}

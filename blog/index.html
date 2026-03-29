@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recherche dans la base de données avec suggestions</title>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=The+Seasons&display=swap" rel="stylesheet">
+</head>
+<style>
+    .highlight {
+    background-color: #d9d0c8; /* Change this to whatever highlight color you prefer */
+}
+</style>
+
+<body class="d-flex align-items-center justify-content-center" style="min-height: 100vh;">
+    <div class="container text-center">
+        <svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="50.000000pt" height="87.000000pt" viewBox="0 0 50.000000 87.000000" preserveAspectRatio="xMidYMid meet">
+
+            <g transform="translate(0.000000,87.000000) scale(0.100000,-0.100000)" fill="#754d2a" stroke="none">
+            <path d="M162 847 c-19 -6 -53 -29 -77 -53 -69 -67 -77 -108 -73 -381 3 -212 5 -231 25 -269 95 -178 330 -178 426 1 20 37 22 57 25 260 4 245 -3 302 -48 363 -56 77 -177 112 -278 79z m148 -17 c49 -13 109 -66 131 -114 16 -36 19 -69 19 -280 0 -223 -1 -243 -21 -283 -27 -56 -62 -83 -109 -83 -66 0 -138 67 -160 150 -16 58 -7 178 18 233 17 37 18 47 7 47 -20 0 -61 -66 -75 -120 -26 -98 -3 -204 57 -261 49 -47 73 -59 119 -59 28 0 35 -3 27 -11 -6 -6 -38 -11 -71 -12 -74 0 -139 34 -180 95 l-27 41 -3 230 -3 230 33 -35 c18 -19 61 -50 96 -68 84 -45 132 -98 132 -148 0 -40 -12 -63 -45 -80 -11 -6 -15 -12 -9 -12 19 0 78 45 92 70 23 44 8 100 -36 142 -22 20 -37 40 -34 43 4 3 0 4 -8 0 -19 -7 -137 70 -163 106 -30 42 -25 98 12 131 17 15 40 28 51 28 11 0 20 4 20 9 0 20 76 26 130 11z"/>
+            <path d="M257 779 c12 -13 26 -35 32 -49 9 -23 10 -22 10 14 1 22 -2 36 -6 33 -3 -4 -18 0 -32 9 l-26 17 22 -24z"/>
+            <path d="M407 519 c12 -13 26 -35 32 -49 9 -23 10 -21 10 18 1 26 -3 41 -9 37 -5 -3 -20 -1 -32 6 l-23 12 22 -24z"/>
+            <path d="M50 348 c0 -17 7 -27 20 -31 18 -5 18 -4 3 22 -10 14 -18 28 -20 30 -2 2 -3 -7 -3 -21z"/>
+            </g>
+            </svg>
+        <h2 class="mt-4" style="padding-top:202px;">Bienvenue</h2>
+        <form action="results.php" method="GET" class="mt-4">
+            <div class="input-group mt-4">
+                <input type="text" name="recherche" id="recherche" class="form-control"
+                    placeholder="Écrivez votre nom..." autocomplete="off">
+            </div>
+            <div id="suggestions" class="mt-2"></div>
+            <div class="input-group-append mt-4">
+                <button type="submit" class="btn btn-primary">Rechercher</button>
+            </div>
+        </form>
+    </div>
+
+    <script>
+    $(document).ready(function() {
+    $('#recherche').on('input', function() {
+        var recherche = $(this).val();
+
+        if (recherche.length > 0) {
+            $.ajax({
+                url: 'script.php',
+                type: 'GET',
+                data: {
+                    recherche: recherche
+                },
+                success: function(data) {
+                    $('#suggestions').html(data).show();
+                    
+                    // Remove existing highlights
+                    $('#suggestions li').removeClass('highlight');
+                    
+                    // Highlight matching suggestions
+                    $('#suggestions li:contains(' + recherche + ')').addClass('highlight');
+                },
+                error: function(xhr, status, error) {
+                    console.error('AJAX Error:', status, error);
+                }
+            });
+        } else {
+            $('#suggestions').hide();
+        }
+    });
+
+    // Gérer la sélection d'une suggestion
+    $(document).on('click', '#suggestions li', function() {
+        var suggestion = $(this).text();
+        $('#recherche').val(suggestion);
+        $('#suggestions').hide();
+    });
+
+    // Masquer les suggestions lorsque le formulaire est soumis
+    $('form').submit(function() {
+        $('#suggestions').hide();
+    });
+});
+
+    </script>
+</body>
+
+</html>

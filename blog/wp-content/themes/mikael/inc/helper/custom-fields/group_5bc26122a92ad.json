@@ -1,0 +1,549 @@
+{
+    "key": "group_5bc26122a92ad",
+    "title": "[Page] Overrides",
+    "fields": [
+        {
+            "key": "field_5bc318c304751",
+            "label": "Navigation",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_5bc26126286c2",
+            "label": "Custom Navigation",
+            "name": "page_custom_navigation",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_5bc33c5551a6c",
+            "label": "Navigation Show",
+            "name": "navigation_show",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5bc26126286c2",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "show": "Show",
+                "hide": "Hide"
+            },
+            "default_value": [],
+            "allow_null": 1,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_5bc3a717dfaa9",
+            "label": "Navigation Opaque",
+            "name": "navigation_opaque",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5bc26126286c2",
+                        "operator": "==",
+                        "value": "1"
+                    },
+                    {
+                        "field": "field_5bc33c5551a6c",
+                        "operator": "==",
+                        "value": "show"
+                    },
+                    {
+                        "field": "field_5bc3406c8a592",
+                        "operator": "!=",
+                        "value": "aside"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "enable": "Enable",
+                "disable": "Disable"
+            },
+            "default_value": [],
+            "allow_null": 1,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_5bc3a769dfaac",
+            "label": "Transparent",
+            "name": "navigation_transparent",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5bc26126286c2",
+                        "operator": "==",
+                        "value": "1"
+                    },
+                    {
+                        "field": "field_5bc33c5551a6c",
+                        "operator": "==",
+                        "value": "show"
+                    },
+                    {
+                        "field": "field_5bc3406c8a592",
+                        "operator": "!=",
+                        "value": "aside"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "enable": "Enable",
+                "disable": "Disable"
+            },
+            "default_value": [],
+            "allow_null": 1,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_5bc3a788dfaad",
+            "label": "Transparent Always",
+            "name": "navigation_transparent_always",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5bc26126286c2",
+                        "operator": "==",
+                        "value": "1"
+                    },
+                    {
+                        "field": "field_5bc33c5551a6c",
+                        "operator": "==",
+                        "value": "show"
+                    },
+                    {
+                        "field": "field_5bc3406c8a592",
+                        "operator": "!=",
+                        "value": "aside"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "enable": "Enable",
+                "disable": "Disable"
+            },
+            "default_value": [],
+            "allow_null": 1,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_5bc3a7a1dfaae",
+            "label": "Sticky",
+            "name": "navigation_sticky",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5bc26126286c2",
+                        "operator": "==",
+                        "value": "1"
+                    },
+                    {
+                        "field": "field_5bc33c5551a6c",
+                        "operator": "==",
+                        "value": "show"
+                    },
+                    {
+                        "field": "field_5bc3406c8a592",
+                        "operator": "!=",
+                        "value": "aside"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "enable": "Enable",
+                "disable": "Disable"
+            },
+            "default_value": [],
+            "allow_null": 1,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_5bc31a3995664",
+            "label": "Footer",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_5bc31a7895666",
+            "label": "Custom Footer",
+            "name": "page_custom_footer",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_5bc31aef95668",
+            "label": "Footer Show",
+            "name": "footer_show",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5bc31a7895666",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "show": "Show",
+                "hide": "Hide"
+            },
+            "default_value": [],
+            "allow_null": 1,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_5f6317198d383",
+            "label": "Footer Layout",
+            "name": "footer_layout",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5bc31a7895666",
+                        "operator": "==",
+                        "value": "1"
+                    },
+                    {
+                        "field": "field_5bc31aef95668",
+                        "operator": "==",
+                        "value": "show"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "default": "Default",
+                "template": "Template"
+            },
+            "default_value": [],
+            "allow_null": 1,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_5bc31ab095667",
+            "label": "Footer Fixed",
+            "name": "footer_fixed",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5bc31a7895666",
+                        "operator": "==",
+                        "value": "1"
+                    },
+                    {
+                        "field": "field_5bc31aef95668",
+                        "operator": "==",
+                        "value": "show"
+                    },
+                    {
+                        "field": "field_5f6317198d383",
+                        "operator": "==",
+                        "value": "default"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "enable": "Enable",
+                "disable": "Disable"
+            },
+            "default_value": [],
+            "allow_null": 1,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_5f6317938d387",
+            "label": "Footer Template",
+            "name": "footer_template",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5bc31a7895666",
+                        "operator": "==",
+                        "value": "1"
+                    },
+                    {
+                        "field": "field_5bc31aef95668",
+                        "operator": "==",
+                        "value": "show"
+                    },
+                    {
+                        "field": "field_5f6317198d383",
+                        "operator": "==",
+                        "value": "template"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "0": "Select a Template",
+                "1856": "test",
+                "5": "Default Kit"
+            },
+            "default_value": [],
+            "allow_null": 1,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_5f6317478d386",
+            "label": "Footer Sticky",
+            "name": "footer_sticky",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5bc31a7895666",
+                        "operator": "==",
+                        "value": "1"
+                    },
+                    {
+                        "field": "field_5bc31aef95668",
+                        "operator": "==",
+                        "value": "show"
+                    },
+                    {
+                        "field": "field_5f6317198d383",
+                        "operator": "==",
+                        "value": "template"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "enable": "Enable",
+                "disable": "Disable"
+            },
+            "default_value": [],
+            "allow_null": 1,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_5e02525c09efd",
+            "label": "Onepage Navigation",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_5e02523009efc",
+            "label": "Onepage Navigation",
+            "name": "onepage_navigation",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
+            }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "page"
+            }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "portfolio"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1600329653
+}

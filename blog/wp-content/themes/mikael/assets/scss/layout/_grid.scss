@@ -1,0 +1,93 @@
+/* LAYOUT: GRID
+-------------------------------------------- */
+
+.container {
+	max-width: 100%;
+}
+
+@media (min-width: 1030px) {
+
+	.container {
+		max-width: 1030px;
+	}
+
+}
+
+/* MAIN
+-------------------------------------------- */
+
+.vlt-main {
+	position: relative;
+	overflow: hidden;
+	z-index: 1;
+
+	&--padding {
+		padding: px2rem(120px) 0;
+	}
+
+}
+
+/* PROTECTED CONTENT
+-------------------------------------------- */
+
+.vlt-content-protected {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 100vh;
+	padding: px2rem(100px) 0;
+}
+
+/* MARKUP CONTENT
+-------------------------------------------- */
+
+.vlt-content-markup {
+
+	p:last-child {
+		margin-bottom: 0;
+	}
+
+	ul,
+	ol {
+		line-height: 2;
+
+		ul,
+		ol {
+			padding-left: px2rem(30px);
+			margin-bottom: 0;
+		}
+
+	}
+
+	>ul,
+	>ol {
+		margin-bottom: px2rem(30px);
+	}
+
+	.fluid-width-video-wrapper {
+		margin-bottom: px2rem(30px);
+	}
+
+}
+
+
+/* ELEMENTOR
+-------------------------------------------- */
+
+.elementor-widget:not(:last-child) {
+	margin-bottom: 0 !important;
+}
+
+.elementor img {
+	width: auto;
+}
+
+.elementor-section.elementor-section-boxed > .elementor-container {
+	max-width: 1030px !important;
+}
+
+/* Custom CSS for fixing Elementor columns gap issue */
+.elementor-inner-section .elementor-column-gap-extended {
+	margin-right: -15px !important;
+	margin-left: -15px !important;
+}
