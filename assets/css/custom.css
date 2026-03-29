@@ -1,0 +1,195 @@
+/* Contact form honeypot (hidden from users) */
+.eretz-hp {
+	position: absolute;
+	left: -9999px;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+	pointer-events: none;
+}
+
+/* Hero headline — smaller than default .vlt-large-heading (5rem) */
+.eretz-hero-heading.vlt-large-heading {
+	font-size: 3.25rem;
+	line-height: 1.12;
+}
+
+@media only screen and (max-width: 991px) {
+	.eretz-hero-heading.vlt-large-heading {
+		font-size: 2.75rem;
+	}
+}
+
+@media only screen and (max-width: 575px) {
+	.eretz-hero-heading.vlt-large-heading {
+		font-size: 2.25rem;
+	}
+}
+
+/* Pricing */
+.eretz-pricing-row .col-md-4 {
+	margin-bottom: 1.5rem;
+}
+
+@media (min-width: 768px) {
+	.eretz-pricing-row .col-md-4 {
+		margin-bottom: 0;
+	}
+}
+
+.eretz-pricing-card {
+	height: 100%;
+	padding: 1.75rem 1.5rem;
+	border: 1px solid rgba(0, 0, 0, 0.08);
+	border-radius: 10px;
+	background: #fff;
+	box-sizing: border-box;
+}
+
+.eretz-pricing-card--featured {
+	border-color: var(--p1, #ec0dff);
+	box-shadow: 0 12px 40px rgba(236, 13, 255, 0.12);
+}
+
+.eretz-pricing-card__name {
+	margin: 0 0 0.35rem;
+	font-size: 1.35rem;
+	font-weight: 600;
+}
+
+.eretz-pricing-card__tag {
+	margin: 0 0 1rem;
+	font-size: 0.9rem;
+	opacity: 0.72;
+}
+
+.eretz-pricing-card__price {
+	margin: 0 0 1.15rem;
+	font-size: 1rem;
+	line-height: 1.3;
+}
+
+.eretz-pricing-card__price span {
+	font-size: 2rem;
+	font-weight: 700;
+	color: var(--p1, #ec0dff);
+	vertical-align: middle;
+}
+
+.eretz-pricing-card__price small {
+	font-size: 0.95rem;
+	font-weight: 500;
+	opacity: 0.65;
+	margin-left: 0.15rem;
+}
+
+.eretz-pricing-card__list {
+	margin: 0;
+	padding-left: 1.2rem;
+	font-size: 0.95rem;
+	line-height: 1.55;
+}
+
+.eretz-pricing-card__list li {
+	margin-bottom: 0.45rem;
+}
+
+.eretz-pricing-card--usage {
+	background: linear-gradient(135deg, rgba(236, 13, 255, 0.04) 0%, rgba(255, 255, 255, 1) 55%);
+	border-style: dashed;
+}
+
+.eretz-pricing-card__usage-lead {
+	margin: 0 0 0.85rem;
+	font-size: 0.95rem;
+	line-height: 1.55;
+	max-width: 42rem;
+}
+
+.eretz-pricing-card__list--inline-note {
+	margin-top: 0.25rem;
+}
+
+.eretz-pricing-card__price--usage span {
+	font-size: 1.65rem;
+}
+
+.eretz-pricing-card__price--usage small {
+	display: block;
+	margin-top: 0.2rem;
+	margin-left: 0;
+	font-size: 0.9rem;
+}
+
+.vlt-custom--8131 {
+	bottom: -250px;
+	left: -200px;
+	max-width: 550px;
+}
+
+.vlt-custom--1451 {
+	top: -25px;
+	left: -30px;
+	width: 256px;
+	height: 208px;
+}
+
+@media only screen and (max-width: 575px) {
+	.vlt-custom--1451 {
+		top: -100px;
+		left: -100px;
+	}
+}
+
+.vlt-custom--1512 {
+	bottom: -28vw;
+	left: 50vw;
+	width: 75vw;
+	height: 75vw;
+	background-size: cover;
+}
+
+.vlt-custom--4124 {
+	top: 0;
+	right: 0;
+	bottom: 0;
+	width: 40vw;
+	height: 100%;
+	background-position: top left;
+	background-size: cover;
+}
+@media only screen and (max-width: 991px) {
+	.vlt-custom--4124 {
+		top: 0;
+		right: 0;
+		bottom: 0;
+		width: 50vw;
+		height: 100%;
+		background-position: top left;
+		background-size: cover;
+	}
+	.vlt-navbar-logo{
+		margin:20px;
+	}
+}
+
+@media only screen and (max-width: 767px) {
+	.vlt-custom--4124 {
+		right: -50vw;
+		width: 100vw;
+	}
+}
+
+.vlt-custom--1259 {
+	top: -20px;
+	right: -5px;
+	width: 256px;
+	height: 208px;
+}
+
+.vlt-custom--2355 {
+	bottom: -250px;
+	left: 0;
+	width: 389px;
+	height: 550px;
+}
